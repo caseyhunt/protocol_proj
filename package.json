@@ -1,6 +1,28 @@
 {
-  "name": "video-app",
-  "version": "0.0.0",
-  "engines": {
-    "node": "12.16.1"
-  }
+  "name": "protocol_proj",
+  "version": "1.0.0",
+  "description": "video app",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.15.2",
+    "helmet": "^4.1.1",
+    "socket.io": "^2.3.0",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caseyhunt/protocol_proj.git"
+  },
+  "author": "casey hunt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caseyhunt/protocol_proj/issues"
+  },
+  "homepage": "https://github.com/caseyhunt/protocol_proj#readme"
+}

@@ -4,12 +4,10 @@
   "description": "video app",
   "main": "server.js",
   "dependencies": {
-    "express": "^4.15.2",
+    "express": "^4.17.1",
     "helmet": "^4.1.1",
-    "reinstall": "^2.0.0",
     "socket.io": "^2.3.0",
-    "ts-node": "^9.0.0",
-    "typescript": "^4.0.3"
+    "ts-node": "^9.0.0"
   },
   "devDependencies": {},
   "scripts": {

@@ -10,9 +10,15 @@ const express = require('express');
 // var server = http.createServer(app);
 // var io = require('socket.io').listen(server);
 
-var app = require('express')();
-var http = require('http').createServer(app);
-var io = require('socket.io')(http);
+// var app = require('express')();
+// var http = require('http').createServer(app);
+// var io = require('socket.io')(http);
+
+var http = require('http');
+var app = express();
+var server = http.createServer(app);
+
+var io = require('socket.io').listen(server);
 
 // var app = require('express')();
 // var http = require('http').createServer(app);
@@ -69,7 +75,11 @@ io.on('connection', function(socket){
 //   console.log('listening on *:3000');
 // });
 
+// const PORT = process.env.PORT || 3000;
+// app.listen(PORT, () => {http.listen(port, () =>{
+//   	    console.log(`Our app is running on port ${ PORT }`);
+
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
+server.listen(PORT, () => {
     console.log(`Our app is running on port ${ PORT }`);
 });

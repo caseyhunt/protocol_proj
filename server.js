@@ -3,9 +3,17 @@ var helmet = require('helmet');
 const express = require('express');
 
 // const app = express();
-var app = require('express')();
-var http = require('http').createServer(app);
-var io = require('socket.io')(http);
+
+var express = require('express')
+  , http = require('http');
+//make sure you keep this order
+var app = express();
+var server = http.createServer(app);
+var io = require('socket.io').listen(server);
+
+// var app = require('express')();
+// var http = require('http').createServer(app);
+// var io = require('socket.io')(http);
 
 
 

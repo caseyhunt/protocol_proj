@@ -58,6 +58,8 @@ io.on('connection', function(socket){
 //   console.log('listening on *:3000');
 // });
 
-http.listen(5500, () =>{
-  console.log('listening on *:5500');
-});
+ app.set('port', process.env.PORT || 3000);
+
+// http.listen(5500, () =>{
+//   console.log('listening on *:5500');
+// });

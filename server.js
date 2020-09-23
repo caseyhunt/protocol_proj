@@ -60,6 +60,6 @@ io.on('connection', function(socket){
 
  app.set('port', process.env.PORT || 3000);
 
-// http.listen(5500, () =>{
-//   console.log('listening on *:5500');
-// });
+http.listen(port, () =>{
+  console.log('listening on *:', port);
+});

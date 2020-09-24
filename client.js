@@ -100,8 +100,7 @@ socket.on('offer', function(event){
     pc.addStream(localStream);
 
     //stores the offer as remote description
-    pc.setLocalDescription(event);
-    signalRemotePeer({ description: pc.localDescription });
+    pc.setRemoteDescription(event);
 
     //prepares an answer
     pc.createAnswer(setLocalAndAnswer, function(e){console.log(e)});
@@ -111,8 +110,7 @@ socket.on('offer', function(event){
 //when server emits answer
 socket.on('answer', function(event){
   //stores it as remote description
-  pc.setLocalDescription(event);
-  signalRemotePeer({ description: pc.localDescription });
+  pc.setRemoteDescription(event);
 })
 
 //when server emits candidate
@@ -130,6 +128,7 @@ socket.on('candidate', function(event){
 //display the other user's video!
 function onAddStream(event){
   remoteVideo.srcObject = stream;
+  console.log('onAddStream is running!')
   remoteStream = event.stream;
 }
 

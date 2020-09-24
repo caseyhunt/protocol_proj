@@ -102,10 +102,16 @@ socket.on('offer', function(event){
     //stores the offer as remote description
     pc.setRemoteDescription(event);
 
+    pc.onnegotiationneeded = e => {
+  if (pc.signalingState != "stable") return;
+  setLocalAndAnswer;
+  console.log("hello???")
+}
+
     //prepares an answer
     // pc.createAnswer(setLocalAndAnswer, function(e){console.log(e)});
     // }
-    pc.createAnswer().then( function(e){setLocalAndAnswer;console.log(e)});
+    pc.createAnswer(setLocalAndAnswer, function(e){console.log(e)});
     }
 });
 

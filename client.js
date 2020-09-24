@@ -112,7 +112,7 @@ socket.on('offer', function(event){
 //when server emits answer
 socket.on('answer', function(event){
   //stores it as remote description
-  pc.setRemoteDescription(event);
+  pc.setRemoteDescription(sessionDescription);
 })
 
 //when server emits candidate

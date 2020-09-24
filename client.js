@@ -103,7 +103,9 @@ socket.on('offer', function(event){
     pc.setRemoteDescription(event);
 
     //prepares an answer
-    pc.createAnswer(setLocalAndAnswer, function(e){console.log(e)});
+    // pc.createAnswer(setLocalAndAnswer, function(e){console.log(e)});
+    // }
+    pc.createAnswer().then( function(e){setLocalAndAnswer;console.log(e)});
     }
 });
 

@@ -102,19 +102,6 @@ socket.on('offer', function(event){
     //stores the offer as remote description
     pc.setRemoteDescription(event);
 
-    let negotiating = false;
-pc.onnegotiationneeded = async e => {
-  try {
-    if (negotiating || pc.signalingState != "stable") return;
-    negotiating = true;
-    /* Your async/await-using code goes here */
-    setLocalAndAnswer;
-  } finally {
-    negotiating = false;
-  }
-}
-
-
     //prepares an answer
     // pc.createAnswer(setLocalAndAnswer, function(e){console.log(e)});
     // }

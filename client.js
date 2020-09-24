@@ -128,8 +128,10 @@ socket.on('candidate', function(event){
 //display the other user's video!
 function onAddStream(event){
   remoteVideo.srcObject = stream;
-  remoteStream = event.stream;
+  remoteStream.srcObject = event.stream;
 }
+
+
 
 //sends a candidate message to the server
 function onIceCandidate(event){

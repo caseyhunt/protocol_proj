@@ -10,7 +10,7 @@ var remoteVideo = document.getElementById('remoteVideo');
 var roomNumber;
 var localStream;
 var remoteStream;
-var rtcPeerConnection;
+var RTCPeerConnection;
 
 //STUN server
 var iceServers={
@@ -70,17 +70,17 @@ socket.on('joined', function(room){
 //when server says 'ready'
 socket.on('ready', function(){
   //creates an RTCPeerConnection object
-  rtcPeerConnection = new rtcPeerConnection(iceServers);
+  RTCPeerConnection = new rtcPeerConnection(iceServers);
 
   //adds event listeners to the newly created object
-  rtcPeerConnection.onicecandidate = onIceCandidate;
-  rtcPeerConnection.onaddstream = onAddStream;
+  RTCPeerConnection.onicecandidate = onIceCandidate;
+  RTCPeerConnection.onaddstream = onAddStream;
 
   //adds current local stream to the object
-  rtcPeerConnection.addStream(localStream);
+  RTCPeerConnection.addStream(localStream);
 
   //prepares an Offer
-  rtcPeerConnection.createOffer(setLocalAndOffer, function(e){
+  RTCPeerConnection.createOffer(setLocalAndOffer, function(e){
     console.log(e)
   });
 
@@ -90,27 +90,27 @@ socket.on('ready', function(){
 socket.on('offer', function(event){
   if(!isCaller){//is caller is set to true in on socket 'created'
     //creates an rtcPeerConnection object
-    rtcPeerConnection = new RTCPeerConnection(iceServers);
+    RTCPeerConnection = new RTCPeerConnection(iceServers);
 
     //adds event listeners to the newly created created object
-    rtcPeerConnection.onicecandidate = onIceCandidate;
-    rtcPeerConnection.onaddstream = onAddStream;
+    RTCPeerConnection.onicecandidate = onIceCandidate;
+    RTCPeerConnection.onaddstream = onAddStream;
 
     //adds the current local stream to the object
-    rtcPeerConnection.addStream(localStream);
+    RTCPeerConnection.addStream(localStream);
 
     //stores the offer as remote description
-    rtcPeerConnection.setRemoteDescription(new RTCSessionDescription(event));
+    RTCPeerConnection.setRemoteDescription(new RTCSessionDescription(event));
 
     //prepares an answer
-    rtcPeerConnection.createAnswer(setLocalAndAnswer, function(e){console.log(e)});
+    RTCPeerConnection.createAnswer(setLocalAndAnswer, function(e){console.log(e)});
     }
 });
 
 //when server emits answer
 socket.on('answer', function(event){
   //stores it as remote description
-  rtcPeerConnection.setRemoteDescription(new RTCSessionDescription(event));;
+  RTCPeerConnection.setRemoteDescription(new RTCSessionDescription(event));;
 })
 
 //when server emits candidate
@@ -121,7 +121,7 @@ socket.on('candidate', function(event){
     candidate:event.candidate
   });
   //stores candidate
-  rtcPeerConnection.addIceCandidate(candidate);
+  RTCPeerConnection.addIceCandidate(candidate);
 });
 
 
@@ -147,7 +147,7 @@ function onIceCandidate(event){
 
 //stores offer and sends message to server
 function setLocalAndOffer(sessionDescription){
-  rtcPeerConnection.setLocalDescription(sessionDescription);
+  RTCPeerConnection.setLocalDescription(sessionDescription);
   socket.emit('offer',{
     type:'offer',
     sdp: sessionDescription,
@@ -157,7 +157,7 @@ function setLocalAndOffer(sessionDescription){
 
 //stores answer and sends message to server
 function setLocalAndAnswer(sessionDescription){
-  rtcPeerConnection.setLocalDescription(sessionDescription);
+  RTCPeerConnection.setLocalDescription(sessionDescription);
   socket.emit('answer',{
     type:'answer',
     sdp:sessionDescription,

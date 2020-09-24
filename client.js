@@ -100,7 +100,7 @@ socket.on('offer', function(event){
     pc.addStream(localStream);
 
     //stores the offer as remote description
-    pc.setRemoteDescription(offer);
+    pc.setRemoteDescription(event);
 
     //prepares an answer
     // pc.createAnswer(setLocalAndAnswer, function(e){console.log(e)});

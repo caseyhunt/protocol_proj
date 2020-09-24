@@ -87,7 +87,7 @@ socket.on('ready', function(){
 });
 
 //when server emits Offer
-socket.on('offer', function('offer'){
+socket.on('offer', function(event){
   if(!isCaller){//is caller is set to true in on socket 'created'
     //creates an pc object
     pc = new RTCPeerConnection(iceServers);
@@ -100,7 +100,7 @@ socket.on('offer', function('offer'){
     pc.addStream(localStream);
 
     //stores the offer as remote description
-    pc.setRemoteDescription('offer');
+    pc.setRemoteDescription(offer);
 
     //prepares an answer
     // pc.createAnswer(setLocalAndAnswer, function(e){console.log(e)});

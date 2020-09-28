@@ -1,30 +1,14 @@
 {
-  "name": "protocol_proj",
+  "name": "video-chat",
   "version": "1.0.0",
-  "description": "video app",
-  "main": "server.js",
+  "main": "index.js",
+  "license": "MIT",
   "dependencies": {
     "express": "^4.17.1",
-    "helmet": "^4.1.1",
-    "socket.io": "^2.3.0",
-    "ts-node": "^9.0.0"
+    "socket.io": "^2.3.0"
   },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "engines": {
-    "node": "12.16.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/caseyhunt/protocol_proj.git"
-  },
-  "author": "casey hunt",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/caseyhunt/protocol_proj/issues"
-  },
-  "homepage": "https://github.com/caseyhunt/protocol_proj#readme"
+  "scripts":{
+    "start": "PROD=true node server.js",
+    "postinstall": "cd ./client && yarn"
+  }
 }

@@ -5,6 +5,7 @@ const app = express();
 const server = http.createServer(app);
 const socket = require("socket.io");
 const io = socket(server);
+const path = require("path");
 
 const rooms = {};
 
@@ -34,8 +35,7 @@ io.on("connection", socket => {
         io.to(incoming.target).emit("ice-candidate", incoming.candidate);
     });
 });
-
-// if(process.env.PROD){
+ // if(process.env.NODE_ENV === "production"){
   app.use(express.static(path.join(_dirname, './client/build')));
   app.get("*", (req, res) => {
     res.sendFile(path.join(_dirname, './client/build/index.html'));
@@ -43,4 +43,4 @@ io.on("connection", socket => {
 //}
 
 const port = process.env.PORT || 8000;
-server.listen(port, () => console.log('server is running on port ${port}');
+server.listen(port, () => console.log('server is running on port ' + port));

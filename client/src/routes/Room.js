@@ -119,8 +119,9 @@ const Room = (props) => {
         partnerVideo.current.srcObject = e.streams[0];
     };
 
+
     return (
-        <div>
+        <div style={border-width: 4px;}>
             <video autoPlay muted ref={userVideo} />
             <video autoPlay ref={partnerVideo} />
         </div>

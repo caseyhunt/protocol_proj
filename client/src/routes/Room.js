@@ -121,7 +121,7 @@ const Room = (props) => {
 
     return (
         <div>
-            <video autoPlay muted style={border-width: 4px;} ref={userVideo} />
+            <video autoPlay muted ref={userVideo} />
             <video autoPlay ref={partnerVideo} />
         </div>
     );

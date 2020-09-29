@@ -23,6 +23,10 @@ io.on("connection", socket => {
         }
     });
 
+    socket.on("disconnect",  payload => {
+        io.to(payload.target).emit("user disconnected", socket.id);
+    });)
+
     socket.on("offer", payload => {
         io.to(payload.target).emit("offer", payload);
     });

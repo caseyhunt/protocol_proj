@@ -29,18 +29,20 @@
 }
 
 .test{
-  opacity:0.7;
+
 }
 
 .vid1{
   position: relative;
       top: 0;
       left: 0;
+      opacity:0.7;
 }
 .vid2{
   position: absolute;
       top: 60px;
       left: 80px;
+      opacity:0.7
 }
 
 @keyframes App-logo-spin {

@@ -28,7 +28,20 @@
   color: #61dafb;
 }
 
+.test{
+  opacity:0.7;
+}
 
+.vid1{
+  position: relative;
+      top: 0;
+      left: 0;
+}
+.vid2{
+  position: absolute;
+      top: 60px;
+      left: 80px;
+}
 
 @keyframes App-logo-spin {
   from {

@@ -24,15 +24,15 @@
   color: white;
 }
 
-.App-link {
+/* .App-link {
   color: #61dafb;
-}
+} */
 
 .test{
 
 }
 
-.vid1{
+/* .vid1{
   position: absolute;
       top: 0;
       left: 25%;
@@ -43,7 +43,7 @@
       top: 0;
       left: 25%;
       opacity:0.7
-}
+} */
 
 @keyframes App-logo-spin {
   from {
@@ -52,4 +52,240 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+   * Show the overflow in IE.
+   * 1. Show the overflow in Edge.
+   */
+
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+   * Remove the inheritance of text transform in Edge, Firefox, and IE.
+   * 1. Remove the inheritance of text transform in Firefox.
+   */
+
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+   * Correct the inability to style clickable types in iOS and Safari.
+   */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+
+@font-face {
+  font-family: "Mondwest";
+  src: url("../fonts/Mondwest/Mondwest-Regular.woff2") format("woff2"),
+    url("../fonts/Mondwest/Mondwest-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "SoLow-Regular";
+  src: url("../fonts/SoLow-Trial/SoLow-Trial-Regular.woff2") format("woff2"),
+    url("../fonts/SoLow-Trial/SoLow-Trial-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "SoLow-Italic";
+  src: url("../fonts/SoLow-Trial/SoLow-Trial-Italic.woff2") format("woff2"),
+    url("../fonts/SoLow-Trial/SoLow-Trial-Italic.woff") format("woff");
+}
+
+body {
+  margin: 0;
+  font-family: "SoLow-Regular", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  font-size: 20px;
+}
+
+/* ------------------ basic styling ------------------ */
+
+.dark {
+  background: #000;
+}
+
+.light {
+  color: #fff;
+}
+
+.pink {
+  color: #ffc0cb;
+}
+
+.outline {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+}
+
+.difference {
+  mix-blend-mode: difference;
+}
+
+.subtitle {
+  color: yellow;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+}
+
+.italic {
+  font-family: "SoLow-Italic";
+}
+
+h1 {
+  text-align: center;
+  font-size: 23vw;
+  line-height: 80%;
+  font-family: "Mondwest";
+  font-weight: 400;
+  margin: 0;
+}
+
+button {
+  padding: 10px 20px;
+  color: #fff;
+  background: none;
+  border: 1px solid #fff;
+  font-family: "SoLow-regular", sans-serif;
+}
+
+button:hover {
+  cursor: pointer;
+  color: #000;
+  background: #fff;
+  border: 1px solid #000;
+  mix-blend-mode: normal;
+}
+
+.next-button:hover {
+  cursor: pointer;
+}
+
+#share-link:hover {
+  mix-blend-mode: normal;
+  color: black;
+  background: white;
+}
+
+.intro {
+  font-size: 30px;
+}
+
+/* ------------------ text layout ------------------ */
+
+#text-container,
+.prompt-container {
+  position: absolute;
+  width: 90vw;
+  height: 90vh;
+  padding: 5vh 5vw;
+  display: flex;
+  flex-direction: column;
+}
+
+#text-container {
+  justify-content: center;
+}
+
+.prompt-container {
+  justify-content: flex-end;
+}
+
+#text-container>div,
+.prompt-container>div {
+  /* border: 1px solid pink; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading-container {
+  flex: 6;
+}
+
+#share-link,
+.intro,
+.button-container {
+  flex: 1;
+}
+
+.hide {
+  opacity: 0;
+  transition: opacity .7s ease-in-out;
+  pointer-events: none;
+}
+
+.prompt-container {
+  opacity: 0;
+  transition: opacity .7s ease-in-out;
+  pointer-events: none;
+}
+
+.prompt-container.show {
+  opacity: 1;
+  transition: opacity .7s ease-in-out 1s;
+  pointer-events: all;
+}
+
+.next {
+  margin-top: 6px;
+}
+
+.link-container {
+  flex-direction: column;
+}
+
+
+/* ------------------ video layout ------------------ */
+
+.vid-container {
+  position: relative;
+  z-index: -100;
+}
+
+.vid1,
+.vid2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  mix-blend-mode: overlay;
+}
+
+img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
 }

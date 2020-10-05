@@ -104,7 +104,7 @@ button,
   -webkit-appearance: button;
 }
 
-/* 
+/*
 @font-face {
   font-family: "Mondwest";
   src: url("../fonts/Mondwest/Mondwest-Regular.woff2") format("woff2"),
@@ -281,6 +281,8 @@ button:hover {
   top: 0;
   left: 0;
   mix-blend-mode: overlay;
+  width: 100vw;
+  height: 100vh;
 }
 
 img {

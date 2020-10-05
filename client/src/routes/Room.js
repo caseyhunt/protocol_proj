@@ -125,7 +125,7 @@ const Room = (props) => {
 
       }));
       console.log('toggled');
-    }
+    };
 
 
     return (

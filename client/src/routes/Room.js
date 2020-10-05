@@ -121,6 +121,7 @@ const Room = (props) => {
 
 
     return (
+      <div>
       <div class="heading-container">
         <h1 class="pink difference">Intimacy Chat</h1>
       </div>
@@ -140,7 +141,7 @@ const Room = (props) => {
         <div class="vid1"><video autoPlay muted ref={userVideo} className="vid1"/></div>
         <div class="vid2"><video autoPlay ref={partnerVideo} className="vid2" /></div>
     </div>
-
+    </div>
 
 
 

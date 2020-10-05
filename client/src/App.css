@@ -107,20 +107,20 @@ button,
 
 @font-face {
   font-family: "Mondwest";
-  src: url("../fonts/Mondwest/Mondwest-Regular.woff2") format("woff2"),
-    url("../fonts/Mondwest/Mondwest-Regular.woff") format("woff");
+  src: url("/fonts/Mondwest/Mondwest-Regular.woff2") format("woff2"),
+    url("/fonts/Mondwest/Mondwest-Regular.woff") format("woff");
 }
 
 @font-face {
   font-family: "SoLow-Regular";
-  src: url("../fonts/SoLow-Trial/SoLow-Trial-Regular.woff2") format("woff2"),
-    url("../fonts/SoLow-Trial/SoLow-Trial-Regular.woff") format("woff");
+  src: url("/fonts/SoLow-Trial/SoLow-Trial-Regular.woff2") format("woff2"),
+    url("/fonts/SoLow-Trial/SoLow-Trial-Regular.woff") format("woff");
 }
 
 @font-face {
   font-family: "SoLow-Italic";
-  src: url("../fonts/SoLow-Trial/SoLow-Trial-Italic.woff2") format("woff2"),
-    url("../fonts/SoLow-Trial/SoLow-Trial-Italic.woff") format("woff");
+  src: url("/fonts/SoLow-Trial/SoLow-Trial-Italic.woff2") format("woff2"),
+    url("/fonts/SoLow-Trial/SoLow-Trial-Italic.woff") format("woff");
 }
 
 body {

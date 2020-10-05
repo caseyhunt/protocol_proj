@@ -121,10 +121,30 @@ const Room = (props) => {
 
 
     return (
-        <div className="test">
-            <video autoPlay muted ref={userVideo} className="vid1"/>
-            <video autoPlay ref={partnerVideo} className="vid2" />
+      <div class="heading-container">
+                <h1 class="pink difference">Intimacy Chat</h1>
+            </div>
+            <div class="link-container">
+                <div class="light difference">invite someone to join you here with this link:</div>
+                <div id="share-link" class="light difference"></div>
+            </div>
+            <div class="button-container"><button class="difference" onclick="elementHide()">let's begin</button></div>
         </div>
+        <div class="prompt-container">
+            <div class="prompt subtitle">
+            </div>
+            <div class="next" onclick="promptNext()">
+                <div class="light difference next-button">next ></div>
+            </div>
+        </div>
+        <div class="vid-container">
+            <div class="vid1"><video autoPlay muted ref={userVideo} className="vid1"/></div>
+            <div class="vid2"><video autoPlay ref={partnerVideo} className="vid2" /></div>
+        </div>
+        // <div className="test">
+        //
+        //
+        // </div>
     );
 };
 

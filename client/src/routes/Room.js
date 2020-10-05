@@ -138,6 +138,8 @@ const Room = (props) => {
         <div id="share-link" class="light difference"></div>
       </div>
       <div class="button-container"><button class="differece" onClick={this.handleClick}>let's begin</button></div>
+
+      // <div class="button-container"><button class="differece" onClick={this.handleClick}>let's begin</button></div>
       <div class="prompt-container">
         <div class="prompt subtitle">
         </div>

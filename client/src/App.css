@@ -104,7 +104,7 @@ button,
   -webkit-appearance: button;
 }
 
-/*
+
 @font-face {
   font-family: "Mondwest";
   src: url("../fonts/Mondwest/Mondwest-Regular.woff2") format("woff2"),
@@ -121,7 +121,7 @@ button,
   font-family: "SoLow-Italic";
   src: url("../fonts/SoLow-Trial/SoLow-Trial-Italic.woff2") format("woff2"),
     url("../fonts/SoLow-Trial/SoLow-Trial-Italic.woff") format("woff");
-} */
+}
 
 body {
   margin: 0;
@@ -271,7 +271,9 @@ button:hover {
 /* ------------------ video layout ------------------ */
 
 .vid-container {
-  position: relative;
+  position: absolute;
+  top:0;
+  left:0;
   z-index: -100;
 }
 

@@ -119,10 +119,12 @@ const Room = (props) => {
         partnerVideo.current.srcObject = e.streams[0];
     };
 
-    const Buttons = (
-
-  <div class="button-container"><button class="differece" onclick="">let's begin</button>
-</div>);
+    handleClick() {
+      this.setState(state => ({
+        isToggleOn: !state.isToggleOn;
+        console.log('toggled');
+      }));
+    }
 
 
     return (
@@ -134,7 +136,7 @@ const Room = (props) => {
         <div class="light difference"> invite someone to join you here with this link:</div>
         <div id="share-link" class="light difference"></div>
       </div>
-      <Buttons/>
+      <div class="button-container"><button class="differece" onClick={this.handleClick}>let's begin</button></div>
       <div class="prompt-container">
         <div class="prompt subtitle">
         </div>

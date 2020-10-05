@@ -119,7 +119,7 @@ const Room = (props) => {
         partnerVideo.current.srcObject = e.streams[0];
     };
 
-    handleClick() {
+    function handleClick() {
       this.setState(state => ({
         isToggleOn: !state.isToggleOn;
         console.log('toggled');

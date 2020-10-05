@@ -119,6 +119,8 @@ const Room = (props) => {
         partnerVideo.current.srcObject = e.streams[0];
     };
 
+    const Buttons =  <button class="differece" onclick="">let's begin</button>;
+
 
     return (
       <div>
@@ -129,7 +131,7 @@ const Room = (props) => {
         <div class="light difference"> invite someone to join you here with this link:</div>
         <div id="share-link" class="light difference"></div>
       </div>
-      <div class="button-container"><button class="differece" onclick="">let's begin</button></div>
+      <div class="button-container"><Buttons/></div>
       <div class="prompt-container">
         <div class="prompt subtitle">
         </div>

@@ -121,9 +121,10 @@ const Room = (props) => {
 
     function handleClick() {
       this.setState(state => ({
-        isToggleOn: !state.isToggleOn;
-        console.log('toggled');
+        isToggleOn: !state.isToggleOn
+
       }));
+      console.log('toggled');
     }
 
 

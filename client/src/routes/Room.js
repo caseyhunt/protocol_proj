@@ -119,7 +119,9 @@ const Room = (props) => {
         partnerVideo.current.srcObject = e.streams[0];
     };
 
-    const Buttons =  <button class="differece" onclick="">let's begin</button>;
+    const Buttons = {
+
+  <button class="differece" onclick="">let's begin</button>};
 
 
     return (

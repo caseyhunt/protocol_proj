@@ -129,7 +129,6 @@ const Room = (props) => {
                 <div id="share-link" class="light difference"></div>
             </div>
             <div class="button-container"><button class="difference" onclick="elementHide()">let's begin</button></div>
-        </div>
         <div class="prompt-container">
             <div class="prompt subtitle">
             </div>

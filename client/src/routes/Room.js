@@ -123,24 +123,21 @@ const Room = (props) => {
         partnerVideo.current.srcObject = e.streams[0];
     };
 
-    function constructor () {
-        super()
-        this.state = {
-          isHidden: true
-        }
-      };
-    function toggleHidden(){
-      console.log('toggle');
-      this.setState({
-   isHidden: !this.state.isHidden
- });
-};
-
     const Child = () => (
 <div className='modal'>
       Hello, World!
   </div>
 )
+
+    function toggleHidden(){
+      console.log('toggle');
+      return(<Child />);
+ //      this.setState({
+ //   isHidden: !this.state.isHidden
+ // });
+};
+
+
 
 
     return (
@@ -152,8 +149,7 @@ const Room = (props) => {
         <div class="light difference"> invite someone to join you here with this link:</div>
         <div id="share-link" class="light difference"></div>
       </div>
-      <div class="button-container"><button class="differece" onClick={toggleHidden}>let's begin</button>
-      {!this.state.isHidden && <Child />}</div>
+      <div class="button-container"><button class="differece" onClick={toggleHidden}>let's begin</button></div>
       <div class="prompt-container">
         <div class="prompt subtitle">
         </div>

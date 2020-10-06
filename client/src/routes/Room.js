@@ -132,9 +132,6 @@ const Room = (props) => {
     function toggleHidden(){
       console.log('toggle');
       console.log(' props.match.params.roomID')
- //      this.setState({
- //   isHidden: !this.state.isHidden
- // });
 };
 
 
@@ -150,7 +147,6 @@ const Room = (props) => {
         <div id="share-link" class="light difference"></div>
       </div>
       <div class="button-container"><button class="differece" onClick={toggleHidden}>let's begin</button>
-      // {!this.state.isHidden && <Child/>}
       </div>
       <div class="prompt-container">
         <div class="prompt subtitle">

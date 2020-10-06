@@ -12,7 +12,7 @@ const Room = (props) => {
     const socketRef = useRef();
     const otherUser = useRef();
     const userStream = useRef();
-    let nextClass = "next";
+    let nextClass = false;
 
 
     useEffect(() => {
@@ -131,16 +131,12 @@ const Room = (props) => {
   </div>
 )
 
-const Toggle = ({ toggle, onToggleList }) => (
-  <button type="button" onClick={onToggleList}>
-    {toggle ? 'Hide' : 'Show'}
-  </button>
-);
+
 
     function toggleHidden(){
       console.log('toggle');
       console.log(props.match.params.roomID)
-      nextClass = nextClass.concat(" visible");
+      nextClass = true;
       console.log(nextClass);
 };
 
@@ -162,7 +158,7 @@ const Toggle = ({ toggle, onToggleList }) => (
             <div class="button-container">
                 <button class="difference" onClick={toggleHidden}>let's begin</button>
             </div>
-
+            {!nextClass && <Child />}
         </div>
 
 
@@ -171,7 +167,7 @@ const Toggle = ({ toggle, onToggleList }) => (
             <div class="prompt subtitle">
             </div>
 
-            <div class={nextClass} onclick="">
+            <div class="next" onclick="">
                 <div class="light difference next-button">next {">"}</div>
             </div>
 

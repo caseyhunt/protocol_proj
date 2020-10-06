@@ -3,15 +3,7 @@ import ReactDOM from 'react-dom';
 import io from "socket.io-client";
 
 
-function Welcome(props) {
-  return <h1>Hello, {props.name}</h1>;
-};
 
-const element = <Welcome name="Sara" />;
-ReactDOM.render(
-  element,
-  document.getElementById('root')
-);
 
 const Room = (props) => {
     const userVideo = useRef();
@@ -145,7 +137,7 @@ const Room = (props) => {
         <div class="light difference"> invite someone to join you here with this link:</div>
         <div id="share-link" class="light difference"></div>
       </div>
-      <div class="button-container"><button class="differece">let's begin</button></div>
+      <div class="button-container"><button class="differece" onClick={toggleHidden}>let's begin</button></div>
       <div class="prompt-container">
         <div class="prompt subtitle">
         </div>

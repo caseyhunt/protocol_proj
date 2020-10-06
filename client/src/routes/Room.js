@@ -131,9 +131,10 @@ const Room = (props) => {
 
     function toggleHidden(){
       console.log('toggle');
-      this.setState({
-   isHidden: !this.state.isHidden
- });
+      console.log(' props.match.params.roomID')
+ //      this.setState({
+ //   isHidden: !this.state.isHidden
+ // });
 };
 
 

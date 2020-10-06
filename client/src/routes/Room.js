@@ -13,9 +13,12 @@ const Room = (props) => {
     const otherUser = useRef();
     const userStream = useRef();
     let vis = "hidden";
-    const state = {
-  isVisible:false
-};
+
+    constructor(props) {
+      super(props)
+      this.state = { term: ''}
+      this.toggleHidden = this.toggleHidden.bind(this)
+    }
 
     useEffect(() => {
         navigator.mediaDevices.getUserMedia({ audio: true, video: true }).then(stream => {
@@ -136,8 +139,7 @@ const Room = (props) => {
     function toggleHidden(){
       console.log('toggle');
       console.log(props.match.params.roomID)
-      this.state({isVisible: true});
-      console.log(vis);
+      console.log(this);
 };
 
 
@@ -158,7 +160,6 @@ const Room = (props) => {
 
             <div class="button-container">
                 <button class="difference" onClick={toggleHidden}>let's begin</button>
-                {state.isVisible && <Child/>}
             </div>
 
         </div>

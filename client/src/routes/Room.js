@@ -12,7 +12,7 @@ const Room = (props) => {
     const socketRef = useRef();
     const otherUser = useRef();
     const userStream = useRef();
-    let vis = "hidden";
+    let vis = null;
 
 
     useEffect(() => {
@@ -157,17 +157,6 @@ const Toggle = ({ toggle, onToggleList }) => (
             <div class="link-container">
                 <div class="light difference">invite someone to join you here with this link:</div>
                 <div id="share-link" class="light difference"><a href="https://blooming-waters-99675.herokuapp.com/room/${props.match.params.roomID}">https://blooming-waters-99675.herokuapp.com/room/${props.match.params.roomID}</a></div>
-            </div>
-            <div>
-              <Toggle
-                toggle={this.state.toggle}
-                onToggleList={() =>
-                  this.setState(prevState => ({
-                    toggle: !prevState.toggle,
-                  }))
-                }
-              />
-              {this.state.toggle && <Child/>}
             </div>
             <div class="button-container">
                 <button class="difference" onClick={toggleHidden}>let's begin</button>

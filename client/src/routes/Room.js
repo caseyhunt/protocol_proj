@@ -173,5 +173,12 @@ const Room = (props) => {
     );
 };
 
-// export default Room;
-ReactDOM.render(<Room/>);
+class HelloWorld extends React.Component {
+  render() {
+    return <p>Hello, world!</p>;
+  }
+}
+
+export default HelloWorld; // expose the HelloWorld component to other modules
+
+export default Room;

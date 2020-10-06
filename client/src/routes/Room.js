@@ -136,7 +136,11 @@ const Room = (props) => {
     function toggleHidden(){
       console.log('toggle');
       console.log(props.match.params.roomID)
-      nextClass = false;
+      Child = () => (
+  <div className='modal'>
+        just kidding!
+    </div>
+  )
       console.log(nextClass);
 };
 
@@ -158,7 +162,7 @@ const Room = (props) => {
             <div class="button-container">
                 <button class="difference" onClick={toggleHidden}>let's begin</button>
             </div>
-            {!nextClass && <Child />}
+            <Child />
         </div>
 
 

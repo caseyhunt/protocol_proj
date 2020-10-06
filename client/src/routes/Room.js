@@ -2,8 +2,15 @@ import React, { useRef, useEffect } from "react";
 import io from "socket.io-client";
 
 
-const element = <h1>Hello, world</h1>;
-ReactDOM.render(element, document.getElementById('root'));
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+};
+
+const element = <Welcome name="Sara" />;
+ReactDOM.render(
+  element,
+  document.getElementById('root')
+);
 
 const Room = (props) => {
     const userVideo = useRef();

@@ -1,6 +1,10 @@
 import React, { useRef, useEffect } from "react";
 import io from "socket.io-client";
 
+
+const element = <h1>Hello, world</h1>;
+ReactDOM.render(element, document.getElementById('root'));
+
 const Room = (props) => {
     const userVideo = useRef();
     const partnerVideo = useRef();

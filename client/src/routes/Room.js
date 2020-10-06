@@ -14,11 +14,6 @@ const Room = (props) => {
     const userStream = useRef();
     let vis = "hidden";
 
-    function constructor(props) {
-      super(props)
-      this.state = { term: ''}
-      this.toggleHidden = this.toggleHidden.bind(this)
-    }
 
     useEffect(() => {
         navigator.mediaDevices.getUserMedia({ audio: true, video: true }).then(stream => {
@@ -136,6 +131,12 @@ const Room = (props) => {
   </div>
 )
 
+const Toggle = ({ toggle, onToggleList }) => (
+  <button type="button" onClick={onToggleList}>
+    {toggle ? 'Hide' : 'Show'}
+  </button>
+);
+
     function toggleHidden(){
       console.log('toggle');
       console.log(props.match.params.roomID)
@@ -157,7 +158,17 @@ const Room = (props) => {
                 <div class="light difference">invite someone to join you here with this link:</div>
                 <div id="share-link" class="light difference"><a href="https://blooming-waters-99675.herokuapp.com/room/${props.match.params.roomID}">https://blooming-waters-99675.herokuapp.com/room/${props.match.params.roomID}</a></div>
             </div>
-
+            <div>
+              <Toggle
+                toggle={this.state.toggle}
+                onToggleList={() =>
+                  this.setState(prevState => ({
+                    toggle: !prevState.toggle,
+                  }))
+                }
+              />
+              {this.state.toggle && <Child/>}
+            </div>
             <div class="button-container">
                 <button class="difference" onClick={toggleHidden}>let's begin</button>
             </div>

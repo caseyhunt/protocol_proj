@@ -127,6 +127,12 @@ const Room = (props) => {
       console.log('toggle');
     }
 
+    const Child = () => (
+<div className='modal'>
+      Hello, World!
+  </div>
+)
+
 
     return (
       <div>
@@ -138,6 +144,7 @@ const Room = (props) => {
         <div id="share-link" class="light difference"></div>
       </div>
       <div class="button-container"><button class="differece" onClick={toggleHidden}>let's begin</button></div>
+      <Child />
       <div class="prompt-container">
         <div class="prompt subtitle">
         </div>

@@ -123,7 +123,7 @@ const Room = (props) => {
         partnerVideo.current.srcObject = e.streams[0];
     };
 
-    constructor () {
+    function constructor () {
         super()
         this.state = {
           isHidden: true

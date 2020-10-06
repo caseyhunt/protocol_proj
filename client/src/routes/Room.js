@@ -158,7 +158,7 @@ const Room = (props) => {
 
             <div class="button-container">
                 <button class="difference" onClick={toggleHidden}>let's begin</button>
-                {this.state.isVisible && <Child/}
+                {this.state.isVisible && <Child/>}
             </div>
 
         </div>

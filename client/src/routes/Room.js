@@ -12,6 +12,7 @@ const Room = (props) => {
     const socketRef = useRef();
     const otherUser = useRef();
     const userStream = useRef();
+    let vis = "hidden";
 
     useEffect(() => {
         navigator.mediaDevices.getUserMedia({ audio: true, video: true }).then(stream => {
@@ -132,6 +133,7 @@ const Room = (props) => {
     function toggleHidden(){
       console.log('toggle');
       console.log(props.match.params.roomID)
+      vis = "visible";
 };
 
 
@@ -144,7 +146,7 @@ const Room = (props) => {
       </div>
       <div class="link-container">
         <div class="light difference"> invite someone to join you here with this link:</div>
-        <div id="share-link" class="light difference"><a href="https://blooming-waters-99675.herokuapp.com/room/${props.match.params.roomID}">"https://blooming-waters-99675.herokuapp.com/room/${props.match.params.roomID}"</a></div>
+        <div id="share-link" class="light difference"><a href="https://blooming-waters-99675.herokuapp.com/room/${props.match.params.roomID}">https://blooming-waters-99675.herokuapp.com/room/${props.match.params.roomID}</a></div>
       </div>
       <div class="button-container"><button class="differece" onClick={toggleHidden}>let's begin</button>
       </div>
@@ -152,7 +154,7 @@ const Room = (props) => {
         <div class="prompt subtitle">
         </div>
         <div class="next" onclick="">
-          <div class="light difference next-button">next </div>
+          <div class="light difference next-button" style="visibility: ${vis};">next </div>
         </div>
       </div>
       <div class="vid-container">

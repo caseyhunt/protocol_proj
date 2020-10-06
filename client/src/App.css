@@ -242,13 +242,13 @@ button:hover {
 }
 
 .hide {
-  opacity: 0;
+  /* opacity: 0; */
   transition: opacity .7s ease-in-out;
   pointer-events: none;
 }
 
 .prompt-container {
-  opacity: 0;
+  /* opacity: 0; */
   transition: opacity .7s ease-in-out;
   pointer-events: none;
 }

@@ -131,7 +131,7 @@ const Room = (props) => {
 
     function toggleHidden(){
       console.log('toggle');
-      console.log(' props.match.params.roomID')
+      console.log(props.match.params.roomID)
 };
 
 

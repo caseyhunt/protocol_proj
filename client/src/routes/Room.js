@@ -171,7 +171,7 @@ const Toggle = ({ toggle, onToggleList }) => (
             <div class="prompt subtitle">
             </div>
 
-            <div class="next" onclick="">
+            <div class="next ${vis}" onclick="">
                 <div class="light difference next-button">next {">"}</div>
             </div>
 

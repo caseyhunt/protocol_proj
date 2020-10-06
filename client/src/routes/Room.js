@@ -148,7 +148,7 @@ const Room = (props) => {
         <div class="light difference"> invite someone to join you here with this link:</div>
         <div id="share-link" class="light difference"></div>
       </div>
-      <div class="button-container"><button class="differece" onClick={this.toggleHidden}>let's begin</button>
+      <div class="button-container"><button class="differece" onClick={this.toggleHidden.bind(this)}>let's begin</button>
       {!this.state.isHidden && <Child/>}</div>
       <div class="prompt-container">
         <div class="prompt subtitle">

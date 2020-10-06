@@ -14,7 +14,7 @@ const Room = (props) => {
     const userStream = useRef();
     let vis = "hidden";
 
-    constructor(props) {
+    function constructor(props) {
       super(props)
       this.state = { term: ''}
       this.toggleHidden = this.toggleHidden.bind(this)

@@ -113,8 +113,8 @@ button,
 
 @font-face {
   font-family: "SoLow-Regular";
-  src: url("/fonts/SoLow-Trial/SoLow-Trial-Regular.woff2") format("woff2"),
-    url("/fonts/SoLow-Trial/SoLow-Trial-Regular.woff") format("woff");
+  src: url("/fonts/SoLow-Trial/SoLow-Trial-webfont.woff2") format("woff2"),
+    url("/fonts/SoLow-Trial/SoLow-Trial-webfont.woff") format("woff");
 }
 
 @font-face {

@@ -140,7 +140,8 @@ const Toggle = ({ toggle, onToggleList }) => (
     function toggleHidden(){
       console.log('toggle');
       console.log(props.match.params.roomID)
-      console.log(this);
+      vis = "visible";
+      console.log(vis);
 };
 
 

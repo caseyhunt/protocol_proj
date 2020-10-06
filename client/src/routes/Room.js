@@ -134,6 +134,7 @@ const Room = (props) => {
       console.log('toggle');
       console.log(props.match.params.roomID)
       vis = "visible";
+      console.log(vis);
 };
 
 
@@ -154,7 +155,7 @@ const Room = (props) => {
         <div class="prompt subtitle">
         </div>
         <div class="next" onclick="">
-          <div class="light difference next-button" style="visibility: ${vis};">next </div>
+          <div class="light difference next-button">next </div>
         </div>
       </div>
       <div class="vid-container">

@@ -140,8 +140,8 @@ const Toggle = ({ toggle, onToggleList }) => (
     function toggleHidden(){
       console.log('toggle');
       console.log(props.match.params.roomID)
-      vis = vis.concat(" visible");
-      console.log(vis);
+      nextClass = nextClass.concat(" visible");
+      console.log(nextClass);
 };
 
 
@@ -171,7 +171,7 @@ const Toggle = ({ toggle, onToggleList }) => (
             <div class="prompt subtitle">
             </div>
 
-            <div class="next ${vis}" onclick="">
+            <div class=nextClass onclick="">
                 <div class="light difference next-button">next {">"}</div>
             </div>
 

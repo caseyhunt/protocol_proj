@@ -123,12 +123,18 @@ const Room = (props) => {
         partnerVideo.current.srcObject = e.streams[0];
     };
 
+    constructor () {
+        super()
+        this.state = {
+          isHidden: true
+        }
+      };
     function toggleHidden(){
       console.log('toggle');
       this.setState({
    isHidden: !this.state.isHidden
  });
-    }
+};
 
     const Child = () => (
 <div className='modal'>

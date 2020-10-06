@@ -132,6 +132,7 @@ const Room = (props) => {
     function toggleHidden(){
       console.log('toggle');
       console.log(props.match.params.roomID)
+      className += ' menu-active';
 };
 
 
@@ -144,7 +145,7 @@ const Room = (props) => {
       </div>
       <div class="link-container">
         <div class="light difference"> invite someone to join you here with this link:</div>
-        <div id="share-link" class="light difference"></div>
+        <div id="share-link" class="light difference">props.match.params.roomID</div>
       </div>
       <div class="button-container"><button class="differece" onClick={toggleHidden}>let's begin</button>
       </div>

@@ -135,6 +135,7 @@ const Room = (props) => {
           <div class="light difference">invite someone to join you here with this link:</div>
           <div id="share-link" class="light difference"><a href="https://blooming-waters-99675.herokuapp.com/room/${props.match.params.roomID}">https://blooming-waters-99675.herokuapp.com/room/${props.match.params.roomID}</a></div>
       </div>
+      </div>
 )
 
 // function toggleHidden() => {(setState(true))};

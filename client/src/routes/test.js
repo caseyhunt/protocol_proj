@@ -11,6 +11,16 @@ const Test = (props) => {
       props.history.push(`/room/${id}`);
   }
 
+
+
+      useEffect(() => {
+          navigator.mediaDevices.getUserMedia({ audio: true, video: true }).then(stream => {
+              userVideo.current.srcObject = stream;
+              userStream.current = stream;
+          });
+
+      }, []);
+
 return (
   <div>
       <div id="text-container">

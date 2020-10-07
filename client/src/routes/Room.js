@@ -12,7 +12,6 @@ const Room = (props) => {
     const socketRef = useRef();
     const otherUser = useRef();
     const userStream = useRef();
-    let state = {nextVisible: false}
 
 
     useEffect(() => {
@@ -136,7 +135,7 @@ const Room = (props) => {
     function toggleHidden(){
       console.log('toggle');
       console.log(props.match.params.roomID);
-      console.log(this.state);
+
 };
 
 
@@ -156,7 +155,6 @@ const Room = (props) => {
             </div>
             <div class="button-container">
                 <button class="difference" onClick={toggleHidden}>let's begin</button>
-                {!this.state && <Child/>}
             </div>
         </div>
 

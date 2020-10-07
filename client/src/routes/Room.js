@@ -15,6 +15,7 @@ const Room = (props) => {
     const initialState = true;
     const [state, setState] = useState(initialState);
     let promptNum = 0;
+    const [promptState, setPrompt] = usePrompt(promptNum);
     const prompts = ['prompt 1 partner 1', 'prompt1 partner 2', 'prompt 2 partner 1', 'prompt 2 partner 2'];
 
     useEffect(() => {
@@ -150,10 +151,10 @@ const Room = (props) => {
       <div class="prompt-container">
 
           <div class="prompt subtitle">
-          {prompts[promptNum]}
+          {prompts[promptState]}
           </div>
 
-          <div class="next" onClick={() => promptNum++}>
+          <div class="next" onClick={() => setPrompt(promptNum++)}>
               <div class="light difference next-button">next {">"}</div>
           </div>
 

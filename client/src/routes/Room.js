@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import ReactDOM from 'react-dom';
 import io from "socket.io-client";
 
@@ -12,7 +12,8 @@ const Room = (props) => {
     const socketRef = useRef();
     const otherUser = useRef();
     const userStream = useRef();
-
+    const initialState = false;
+    const [state, setState] = useState(initialState);
 
     useEffect(() => {
         navigator.mediaDevices.getUserMedia({ audio: true, video: true }).then(stream => {
@@ -135,18 +136,18 @@ function toggleHidden(){
   console.log('toggle');
   console.log(props.match.params.roomID);
   props.visibility = true;
-  props.typingstuff = "string";
+  setState(true);
   console.log(props.visibility);
 };
 
-
-useEffect(() => {
-   // adding listeners everytime props.x changes
-   return () => {
-   console.log('doing ittt');
-};
-
-}, [props.visibility])
+// 
+// useEffect(() => {
+//    // adding listeners everytime props.x changes
+//    return () => {
+//    console.log('doing ittt');
+// };
+//
+// }, [props.visibility])
 
 
 

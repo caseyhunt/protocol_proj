@@ -163,7 +163,7 @@ const Room = (props) => {
                 <div id="share-link" class="light difference"><a href="https://blooming-waters-99675.herokuapp.com/room/${props.match.params.roomID}">https://blooming-waters-99675.herokuapp.com/room/${props.match.params.roomID}</a></div>
             </div>
             <div class="button-container">
-                <button class="difference" onClick={() => setState(true))}>let's begin</button>
+                <button class="difference" onClick={() => setState(true)}>let's begin</button>
                 {state && <Child/>}
             </div>
         </div>

@@ -3,7 +3,6 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import CreateRoom from "./routes/CreateRoom";
 import Room from "./routes/Room";
 import './App.css';
-import 'https://use.typekit.net/dwo8vrd.css';
 
 function App() {
   return (

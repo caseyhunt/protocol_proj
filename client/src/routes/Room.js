@@ -202,6 +202,7 @@ function nextClicked(){
             <div class="vid1"><video autoPlay muted ref={userVideo} className="vid1"/></div>
             <div class="vid2"><video autoPlay ref={partnerVideo} className="vid2" /></div>
         </div>
+        <button class="light difference next-button" onClick={console.log('clicked')}>next {">"}</button>
 
     </div>
 

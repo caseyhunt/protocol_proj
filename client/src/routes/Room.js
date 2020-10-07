@@ -163,7 +163,7 @@ useEffect(()=>{
             </div>
             <div class="button-container">
                 <button class="difference" onClick={toggleHidden}>let's begin</button>
-                {!next && <Child/>}
+                {!next.state && <Child/>}
             </div>
         </div>
 

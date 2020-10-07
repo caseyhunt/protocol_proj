@@ -175,7 +175,7 @@ function nextClicked(){
 
           <div class="next" >
 
-              <button class="light difference next-button" onClick={() => { console.log('worked');  if(prompt<prompts.length-1){setPrompt(prevCount => prevCount + 1);}; nextClicked; }}>next {">"}</button>
+              <button class="light difference next-button" onClick={() => { console.log('worked');  if(prompt<prompts.length-1){setPrompt(prevCount => prevCount + 1);}; nextClicked(); }}>next {">"}</button>
 
           </div>
 

@@ -41,11 +41,16 @@ const Room = (props) => {
 
             socketRef.current.on("ice-candidate", handleNewICECandidateMsg);
 
-            socketRef.current.on("next", nextClicked);
+
         });
 
 
     }, []);
+
+
+    useEffect(() =>{
+          console.log('got it');
+    }, [socketRef.current.on("next")]);
 
     function callUser(userID) {
         peerRef.current = createPeer(userID);
@@ -140,7 +145,7 @@ const Room = (props) => {
 
                 <div class="link-container">
                     <div class="light difference">invite someone to join you here with this link:</div>
-                    <div id="share-link" class="light difference"><a href="https://blooming-waters-99675.herokuapp.com/room/${props.match.params.roomID}">https://blooming-waters-99675.herokuapp.com/room/${props.match.params.roomID}</a></div>
+                    <div id="share-link" class="light difference"><a href="https://blooming-waters-99675.herokuapp.com/room/${props.match.params.roomID}">https://blooming-waters-99675.herokuapp.com/room/{props.match.params.roomID}</a></div>
                 </div>
 
                 <div class="button-container">

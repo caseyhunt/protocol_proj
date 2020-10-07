@@ -136,9 +136,9 @@ function toggleHidden(){
   console.log('toggle');
   console.log(props.match.params.roomID);
   props.visibility = true;
-  setState(true);
+  useState(true);
   console.log(state);
-  console.log(props.visibility);
+  //console.log(props.visibility);
 };
 
 //

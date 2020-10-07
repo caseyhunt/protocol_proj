@@ -149,7 +149,7 @@ const Room = (props) => {
       <div class="prompt-container">
 
           <div class="prompt subtitle">
-          ${prompts[0]}
+          {prompts[0]}
           </div>
 
           <div class="next" onclick="">

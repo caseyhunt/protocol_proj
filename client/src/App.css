@@ -178,8 +178,14 @@ button:hover {
   mix-blend-mode: normal;
 }
 
+.next-button {
+  border: none;
+
+}
+
 .next-button:hover {
   cursor: pointer;
+  background: rgba(255, 255, 255, 0);
 }
 
 #share-link {

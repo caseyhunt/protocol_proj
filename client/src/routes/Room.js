@@ -44,6 +44,7 @@ const Room = (props) => {
           props.visibility = true;
           props.typingstuff = "string";
           console.log(props.visibility);
+          console.log(props.typingstuff);
     };
 
     }, []);
@@ -168,7 +169,7 @@ const Room = (props) => {
             <div class="prompt subtitle">
             </div>
 
-            <div class="next ${props.typingstuff}" onclick="">
+            <div class="next" onclick="">
                 <div class="light difference next-button">next {">"}</div>
             </div>
 

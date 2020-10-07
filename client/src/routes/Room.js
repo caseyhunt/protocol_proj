@@ -14,8 +14,8 @@ const Room = (props) => {
     const userStream = useRef();
     const initialState = true;
     const [state, setState] = useState(initialState);
-    let promptNum = 0;
-    const [promptState, setPrompt] = usePrompt(0);
+    const promptNum = 0;
+    const [promptState, setPrompt] = usePrompt(promptNum);
     const prompts = ['prompt 1 partner 1', 'prompt1 partner 2', 'prompt 2 partner 1', 'prompt 2 partner 2'];
 
     useEffect(() => {
@@ -154,7 +154,7 @@ const Room = (props) => {
           {prompts[promptState]}
           </div>
 
-          <div class="next" onClick={() => setPrompt(promptNum++)}>
+          <div class="next" onClick={() => setPrompt(prevCount => prevCount + 1)}>
               <div class="light difference next-button">next {">"}</div>
           </div>
 

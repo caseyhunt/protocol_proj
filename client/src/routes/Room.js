@@ -150,8 +150,6 @@ const Room = (props) => {
 
 function nextClicked(){
   console.log('clicked');
-  setPrompt(prevCount => prevCount + 1);
-  //socketRef.current.emit(prompt);
   // promptNum=promptNum+1;
   // console.log(promptNum);
 
@@ -168,7 +166,7 @@ function nextClicked(){
 
 
           <div class="next" >
-              <button class="light difference next-button" onClick={nextClicked}>next {">"}</button>
+              <button class="light difference next-button" onClick={() => { console.log('worked'); setPrompt(prevCount => prevCount + 1); socketRef.current.emit(prompt);}}>next {">"}</button>
           </div>
 
       </div>

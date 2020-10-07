@@ -127,6 +127,7 @@ const Room = (props) => {
     };
 
     const Child = () => (
+      <div>
       <div class="heading-container">
           <h1 class="pink difference">Intimacy Chat</h1>
       </div>

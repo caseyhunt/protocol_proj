@@ -159,13 +159,13 @@ function nextClicked(){
       <div class="prompt-container">
 
           <div class="prompt subtitle">
-          {prompts[promptNum]}
+          {prompts[prompt]}
           </div>
 
 
 
           <div class="next" >
-              <button class="light difference next-button" onClick={() => { console.log('worked'); setPrompt(prevCount => prevCount + 1); }}>next {">"}</button>
+              <button class="light difference next-button" onClick={() => { console.log('worked'); setPrompt(2); }}>next {">"}</button>
           </div>
 
       </div>

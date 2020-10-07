@@ -149,8 +149,8 @@ const Room = (props) => {
 
 function nextClicked(){
   console.log('clicked');
-  promptNum=promptNum+1;
-  console.log(promptNum);
+  // promptNum=promptNum+1;
+  // console.log(promptNum);
 
 }
 
@@ -163,7 +163,7 @@ function nextClicked(){
           </div>
 
           <div class="next" >
-              <div class="light difference next-button" onClick={console.log('clicked')}>next {">"}</div>
+              <div class="light difference next-button" onClick={nextClicked}>next {">"}</div>
           </div>
 
       </div>

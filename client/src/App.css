@@ -167,7 +167,7 @@ button {
   color: #fff;
   background: none;
   border: 1px solid #fff;
-  font-family: "SoLow-regular", sans-serif;
+  font-family: lores-12, sans-serif;
 }
 
 button:hover {

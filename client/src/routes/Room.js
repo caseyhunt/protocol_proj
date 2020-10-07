@@ -147,7 +147,7 @@ const Room = (props) => {
                 </div>
 
                 <div class="button-container">
-                    <button class="difference" onClick={() => {setState(false);socketRef.current = io.connect("/");}}>let's begin</button>
+                    <button class="difference" onClick={() => {setState(false);}}>let's begin</button>
                 </div>
            </div>
       </div>
@@ -155,6 +155,9 @@ const Room = (props) => {
 
 function nextClicked(){
   console.log('clicked');
+    socketRef.current = io.connect("/");
+  socketRef.current.broadcast.emit("next");
+
   // promptNum=promptNum+1;
   // console.log(promptNum);
 
@@ -172,7 +175,7 @@ function nextClicked(){
 
           <div class="next" >
 
-              <button class="light difference next-button" onClick={() => { console.log('worked');  if(prompt<prompts.length-1){setPrompt(prevCount => prevCount + 1);}; socketRef.current.broadcast.emit("next");  }}>next {">"}</button>
+              <button class="light difference next-button" onClick={() => { console.log('worked');  if(prompt<prompts.length-1){setPrompt(prevCount => prevCount + 1);}; nextClicked; }}>next {">"}</button>
 
           </div>
 

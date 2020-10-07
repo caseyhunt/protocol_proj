@@ -28,9 +28,7 @@
   color: #61dafb;
 } */
 
-.test{
-
-}
+.test {}
 
 /* .vid1{
   position: absolute;
@@ -49,6 +47,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -111,21 +110,11 @@ button,
     url("/fonts/Mondwest/Mondwest-Regular.woff") format("woff");
 }
 
-@font-face {
-  font-family: "SoLow-Regular";
-  src: url("/fonts/SoLow-Trial/SoLow-Trial-webfont.woff2") format("woff2"),
-    url("/fonts/SoLow-Trial/SoLow-Trial-webfont.woff") format("woff");
-}
-
-@font-face {
-  font-family: "SoLow-Italic";
-  src: url("/fonts/SoLow-Trial/SoLow-Trial-Italic.woff2") format("woff2"),
-    url("/fonts/SoLow-Trial/SoLow-Trial-Italic.woff") format("woff");
-}
-
 body {
   margin: 0;
-  font-family: "SoLow-Regular", sans-serif;
+  font-family: lores-12, sans-serif;
+  font-weight: 400;
+  font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -168,7 +157,7 @@ h1 {
   text-align: center;
   font-size: 23vw;
   line-height: 80%;
-  font-family: 'VT323', monospace;
+  font-family: lores-21-serif, sans-serif;
   font-weight: 400;
   margin: 0;
 }
@@ -191,6 +180,10 @@ button:hover {
 
 .next-button:hover {
   cursor: pointer;
+}
+
+#share-link {
+  font-size: 17px;
 }
 
 #share-link:hover {
@@ -272,8 +265,8 @@ button:hover {
 
 .vid-container {
   position: absolute;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   z-index: -100;
 }
 

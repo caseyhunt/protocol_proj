@@ -38,13 +38,6 @@ const Room = (props) => {
             socketRef.current.on("ice-candidate", handleNewICECandidateMsg);
         });
 
-        function toggleHidden(){
-          console.log('toggle');
-          console.log(props.match.params.roomID);
-          props.visibility = true;
-          props.typingstuff = "string";
-          console.log(props.visibility);
-    };
 
     }, []);
 
@@ -137,6 +130,26 @@ const Room = (props) => {
       Hello, World!
   </div>
 )
+
+function toggleHidden(){
+  console.log('toggle');
+  console.log(props.match.params.roomID);
+  props.visibility = true;
+  props.typingstuff = "string";
+  console.log(props.visibility);
+};
+
+
+useEffect(() => {
+   // adding listeners everytime props.x changes
+   return () => {
+     Child = () => (
+ <div className='modal'>
+       JK!
+   </div>
+ )
+   }
+}, [props.visibility])
 
 
 

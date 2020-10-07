@@ -12,7 +12,7 @@ const Room = (props) => {
     const socketRef = useRef();
     const otherUser = useRef();
     const userStream = useRef();
-    const initialState = false;
+    const initialState = true;
     const [state, setState] = useState(initialState);
 
     useEffect(() => {
@@ -127,9 +127,14 @@ const Room = (props) => {
     };
 
     const Child = () => (
-<div className='modal'>
-      Hello, World!
-  </div>
+      <div class="heading-container">
+          <h1 class="pink difference">Intimacy Chat</h1>
+      </div>
+
+      <div class="link-container">
+          <div class="light difference">invite someone to join you here with this link:</div>
+          <div id="share-link" class="light difference"><a href="https://blooming-waters-99675.herokuapp.com/room/${props.match.params.roomID}">https://blooming-waters-99675.herokuapp.com/room/${props.match.params.roomID}</a></div>
+      </div>
 )
 
 // function toggleHidden() => {(setState(true))};
@@ -154,16 +159,9 @@ const Room = (props) => {
     <div>
         <div id="text-container">
 
-            <div class="heading-container">
-                <h1 class="pink difference">Intimacy Chat</h1>
-            </div>
 
-            <div class="link-container">
-                <div class="light difference">invite someone to join you here with this link:</div>
-                <div id="share-link" class="light difference"><a href="https://blooming-waters-99675.herokuapp.com/room/${props.match.params.roomID}">https://blooming-waters-99675.herokuapp.com/room/${props.match.params.roomID}</a></div>
-            </div>
             <div class="button-container">
-                <button class="difference" onClick={() => setState(true)}>let's begin</button>
+                <button class="difference" onClick={() => setState(false)}>let's begin</button>
                 {state && <Child/>}
             </div>
         </div>

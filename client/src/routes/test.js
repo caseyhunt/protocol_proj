@@ -10,7 +10,7 @@ const Test = (props) => {
   function create() {
       const id = uuid();
       //props.history.push(`/room/${id}`);
-      const roomNum = /room/${id}';
+      const roomNum = '/room/${id}';
   }
 
 

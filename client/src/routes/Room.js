@@ -44,7 +44,6 @@ const Room = (props) => {
           props.visibility = true;
           props.typingstuff = "string";
           console.log(props.visibility);
-          console.log(props.typingstuff);
     };
 
     }, []);
@@ -160,6 +159,7 @@ const Room = (props) => {
             </div>
             <div class="button-container">
                 <button class="difference" onClick={toggleHidden}>let's begin</button>
+
             </div>
         </div>
 

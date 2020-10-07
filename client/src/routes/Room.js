@@ -151,7 +151,7 @@ const Room = (props) => {
 function nextClicked(){
   console.log('clicked');
   setPrompt(prevCount => prevCount + 1);
-  socketRef.current.emit(prompt);
+  //socketRef.current.emit(prompt);
   // promptNum=promptNum+1;
   // console.log(promptNum);
 

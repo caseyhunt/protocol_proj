@@ -147,7 +147,7 @@ const Room = (props) => {
                 </div>
 
                 <div class="button-container">
-                    <button class="difference" onClick={() => setState(false);socketRef.current = io.connect("/");}>let's begin</button>
+                    <button class="difference" onClick={() => {setState(false);socketRef.current = io.connect("/");}}>let's begin</button>
                 </div>
            </div>
       </div>

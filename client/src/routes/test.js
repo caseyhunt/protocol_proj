@@ -6,12 +6,6 @@ import { v1 as uuid } from "uuid";
 const Test = (props) => {
   const userVideo = useRef();
 
-  useEffect(() => {
-      navigator.mediaDevices.getUserMedia({ audio: true, video: true }).then(stream => {
-          userVideo.current.srcObject = stream;
-          userStream.current = stream;},[]);
-
-
   function create() {
       const id = uuid();
       props.history.push(`/room/${id}`);

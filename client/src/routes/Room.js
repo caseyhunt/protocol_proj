@@ -18,6 +18,7 @@ const Room = (props) => {
     const [prompt, setPrompt] = useState(promptNum);
     const prompts = ["Align your eyes with your partner's eyes to establish a personal connection", "Have you and your partner achieved eye-to-eye alignment?", "Exert your realistic presence to your partner", "Maintain a three-dimensional sense of your partner's presence", "Are you capturing the attention of your partner?", "Be careful to avoid the misalignment of eye contact with your partner", "Align your breath with your partner's breath", "Do you feel that you and your partner are developing your tele-intuition", "Speed towards your partner at the speed of light", "Even if you cannot deliver eye contact, you are in command"];
 
+
     useEffect(() => {
         navigator.mediaDevices.getUserMedia({ audio: true, video: true }).then(stream => {
             userVideo.current.srcObject = stream;
@@ -146,7 +147,7 @@ const Room = (props) => {
                 </div>
 
                 <div class="button-container">
-                    <button class="difference" onClick={() => setState(false)}>let's begin</button>
+                    <button class="difference" onClick={() => setState(false);socketRef.current = io.connect("/");}>let's begin</button>
                 </div>
            </div>
       </div>
@@ -171,7 +172,7 @@ function nextClicked(){
 
           <div class="next" >
 
-              <button class="light difference next-button" onClick={() => { console.log('worked'); socketRef.current = io.connect("/"); if(prompt<prompts.length-1){setPrompt(prevCount => prevCount + 1);}; socketRef.current.broadcast.emit("next");  }}>next {">"}</button>
+              <button class="light difference next-button" onClick={() => { console.log('worked');  if(prompt<prompts.length-1){setPrompt(prevCount => prevCount + 1);}; socketRef.current.broadcast.emit("next");  }}>next {">"}</button>
 
           </div>
 

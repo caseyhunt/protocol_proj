@@ -9,7 +9,7 @@ const Test = (props) => {
   useEffect(() => {
       navigator.mediaDevices.getUserMedia({ audio: true, video: true }).then(stream => {
           userVideo.current.srcObject = stream;
-          userStream.current = stream;})
+          userStream.current = stream;},[]);
 
 
   function create() {

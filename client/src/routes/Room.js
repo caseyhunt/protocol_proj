@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import ReactDOM from 'react-dom';
 import io from "socket.io-client";
 
@@ -12,13 +12,8 @@ const Room = (props) => {
     const socketRef = useRef();
     const otherUser = useRef();
     const userStream = useRef();
-    let vis = "hidden";
-
-    function constructor(props) {
-      super(props)
-      this.state = { term: ''}
-      this.toggleHidden = this.toggleHidden.bind(this)
-    }
+    const initialState = true;
+    const [state, setState] = useState(initialState);
 
     useEffect(() => {
         navigator.mediaDevices.getUserMedia({ audio: true, video: true }).then(stream => {
@@ -43,6 +38,7 @@ const Room = (props) => {
 
             socketRef.current.on("ice-candidate", handleNewICECandidateMsg);
         });
+
 
     }, []);
 
@@ -130,51 +126,65 @@ const Room = (props) => {
         partnerVideo.current.srcObject = e.streams[0];
     };
 
-    const Child = () => (
-<div className='modal'>
-      Hello, World!
-  </div>
+    const Title = () => (
+      <div>
+      <div class="heading-container">
+          <h1 class="pink difference">Intimacy Chat</h1>
+      </div>
+
+      <div class="link-container">
+          <div class="light difference">invite someone to join you here with this link:</div>
+          <div id="share-link" class="light difference"><a href="https://blooming-waters-99675.herokuapp.com/room/${props.match.params.roomID}">https://blooming-waters-99675.herokuapp.com/room/${props.match.params.roomID}</a></div>
+      </div>
+      <div class="button-container">
+
+          <button class="difference" onClick={() => setState(false)}>let's begin</button>
+
+      </div>
+      </div>
 )
 
-    function toggleHidden(){
-      console.log('toggle');
-      console.log(props.match.params.roomID)
-      console.log(this);
-};
+    const Prompt = () => (
+      <div class="prompt-container">
+
+          <div class="prompt subtitle">
+          This is a prompt
+          </div>
+
+          <div class="next" onclick="">
+              <div class="light difference next-button">next {">"}</div>
+          </div>
+
+      </div>
+
+    )
+
+// function toggleHidden() => {(setState(true))};
+
+//
+// useEffect(() => {
+//    // adding listeners everytime props.x changes
+//    return () => {
+//    console.log('doing ittt');
+// };
+//
+// }, [props.visibility])
+
+
+
+
 
 
 
 
     return (
     <div>
-        <div id="text-container">
-
-            <div class="heading-container">
-                <h1 class="pink difference">Intimacy Chat</h1>
-            </div>
-
-            <div class="link-container">
-                <div class="light difference">invite someone to join you here with this link:</div>
-                <div id="share-link" class="light difference"><a href="https://blooming-waters-99675.herokuapp.com/room/${props.match.params.roomID}">https://blooming-waters-99675.herokuapp.com/room/${props.match.params.roomID}</a></div>
-            </div>
-
-            <div class="button-container">
-                <button class="difference" onClick={toggleHidden}>let's begin</button>
-            </div>
-
-        </div>
+          {state && <Title/>}
+          {!state && <Prompt/>}
 
 
-        <div class="prompt-container">
 
-            <div class="prompt subtitle">
-            </div>
 
-            <div class="next" onclick="">
-                <div class="light difference next-button">next {">"}</div>
-            </div>
-
-        </div>
 
         <div class="vid-container">
             <div class="vid1"><video autoPlay muted ref={userVideo} className="vid1"/></div>

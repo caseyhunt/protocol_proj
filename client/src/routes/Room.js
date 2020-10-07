@@ -159,10 +159,11 @@ const Room = (props) => {
 
     return (
     <div>
-
+                      {state && <Child/>}
             <div class="button-container">
+
                 <button class="difference" onClick={() => setState(false)}>let's begin</button>
-                {state && <Child/>}
+
             </div>
 
 

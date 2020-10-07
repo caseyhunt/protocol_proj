@@ -49,6 +49,7 @@ const Room = (props) => {
 
 
     useEffect(() =>{
+      socketRef.current = io.connect("/");
           socketRef.current.on("next", nextClicked);
     }, []);
 

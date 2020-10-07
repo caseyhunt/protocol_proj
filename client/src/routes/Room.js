@@ -147,6 +147,14 @@ const Room = (props) => {
       </div>
 )
 
+function nextClicked(){
+  console.log('clicked');
+  promptNum=promptNum+1;
+  console.log(promptNum);
+
+}
+
+
     const Prompt = () => (
       <div class="prompt-container">
 
@@ -154,20 +162,14 @@ const Room = (props) => {
           {prompts[promptNum]}
           </div>
 
-          <div class="next" onClick={nextClicked}>
-              <div class="light difference next-button">next {">"}</div>
+          <div class="next" >
+              <div class="light difference next-button" onClick={nextClicked}>next {">"}</div>
           </div>
 
       </div>
 
     )
 
-function nextClicked(){
-  console.log('clicked');
-  promptNum=promptNum+1;
-  console.log(promptNum);
-
-}
 
 // function toggleHidden() => {(setState(true))};
 

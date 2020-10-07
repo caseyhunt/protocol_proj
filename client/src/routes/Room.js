@@ -135,7 +135,8 @@ const Room = (props) => {
     function toggleHidden(){
       console.log('toggle');
       console.log(props.match.params.roomID);
-
+      props.visibility = true;
+      console.log(props.visibility);
 };
 
 
@@ -155,6 +156,7 @@ const Room = (props) => {
             </div>
             <div class="button-container">
                 <button class="difference" onClick={toggleHidden}>let's begin</button>
+                {!props.visibility && <Child/>}
             </div>
         </div>
 

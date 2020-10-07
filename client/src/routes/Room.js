@@ -49,8 +49,8 @@ const Room = (props) => {
 
 
     useEffect(() =>{
-          console.log('got it');
-    }, [socketRef.current.on("next")]);
+          socketRef.current.on("next", nextClicked);
+    }, []);
 
     function callUser(userID) {
         peerRef.current = createPeer(userID);
@@ -174,7 +174,7 @@ function nextClicked(){
 
           <div class="next" >
 
-              <button class="light difference next-button" onClick={() => { console.log('worked'); if(prompt<prompts.length-1){setPrompt(prevCount => prevCount + 1);}; socketRef.current.emit("next");  }}>next {">"}</button>
+              <button class="light difference next-button" onClick={() => { console.log('worked'); if(prompt<prompts.length-1){setPrompt(prevCount => prevCount + 1);}; socket.broadcast.emit("next");  }}>next {">"}</button>
 
           </div>
 

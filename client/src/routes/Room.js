@@ -173,7 +173,7 @@ function nextClicked(){
     )
 
     const Button = () => (
-      <div>
+      <div class="prompt-container next">
       <button class="light difference next-button" onClick={() => { console.log('worked'); }}>next {">"}</button>
       </div>
     )

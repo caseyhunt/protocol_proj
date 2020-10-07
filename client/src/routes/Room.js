@@ -162,7 +162,7 @@ function nextClicked(){
           {prompts[promptNum]}
           </div>
 
-          <button class="light difference next-button" onClick={() => { console.log('worked'); }}>next {">"}</button>
+
 
           <div class="next" >
               <button class="light difference next-button" onClick={() => { console.log('worked'); }}>next {">"}</button>
@@ -170,6 +170,12 @@ function nextClicked(){
 
       </div>
 
+    )
+
+    const Button = () => (
+      <div>
+      <button class="light difference next-button" onClick={() => { console.log('worked'); }}>next {">"}</button>
+      </div>
     )
 
 
@@ -195,6 +201,7 @@ function nextClicked(){
     <div>
           {state && <Title/>}
           {!state && <Prompt/>}
+          {!state && <Button/>}
 
 
 

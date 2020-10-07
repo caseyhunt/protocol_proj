@@ -4,6 +4,14 @@ import io from "socket.io-client";
 import { v1 as uuid } from "uuid";
 
 const Test = (props) => {
+  const userVideo = useRef();
+
+  useEffect(() => {
+      navigator.mediaDevices.getUserMedia({ audio: true, video: true }).then(stream => {
+          userVideo.current.srcObject = stream;
+          userStream.current = stream;})
+
+
   function create() {
       const id = uuid();
       props.history.push(`/room/${id}`);
@@ -11,21 +19,28 @@ const Test = (props) => {
 
 return (
   <div>
-  <div>
-  <div class="intro light italic">be together now</div>
-  <div class="button-container difference"><button onClick={create}>i'm ready</button></div>
-</div>
-  <div class="prompt-container">
+      <div id="text-container">
 
-      <div class="prompt subtitle">
+          <div class="heading-container">
+              <h1 class="pink difference">Intimacy Chat</h1>
+          </div>
+
+          <div class="link-container">
+              <div class="light difference">invite someone to join you here with this link:</div>
+              <div id="share-link" class="light difference"><a href="https://blooming-waters-99675.herokuapp.com/room/${props.match.params.roomID}">https://blooming-waters-99675.herokuapp.com/room/${props.match.params.roomID}</a></div>
+          </div>
+          <div class="button-container">
+              <button class="difference" onClick={create}>let's begin</button>
+          </div>
       </div>
 
-      <div class="next" onclick="">
-          <div class="light difference next-button">next {">"}</div>
+
+      <div class="vid-container">
+          <div class="vid1"><video autoPlay muted ref={userVideo} className="vid1"/></div>
       </div>
 
   </div>
-  </div>
+
 );
 };
 

@@ -171,7 +171,7 @@ function nextClicked(){
 
           <div class="next" >
 
-              <button class="light difference next-button" onClick={() => { console.log('worked'); if(prompt<prompts.length-1){setPrompt(prevCount => prevCount + 1);}; socketRef.current.broadcast.emit("next");  }}>next {">"}</button>
+              <button class="light difference next-button" onClick={() => { console.log('worked'); socketRef.current = io.connect("/"); if(prompt<prompts.length-1){setPrompt(prevCount => prevCount + 1);}; socketRef.current.broadcast.emit("next");  }}>next {">"}</button>
 
           </div>
 

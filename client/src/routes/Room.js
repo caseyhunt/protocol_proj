@@ -12,7 +12,7 @@ const Room = (props) => {
     const socketRef = useRef();
     const otherUser = useRef();
     const userStream = useRef();
-    let next = true;
+    let next = useRef();
 
 
     useEffect(() => {
@@ -136,6 +136,8 @@ const Room = (props) => {
     function toggleHidden(){
       console.log('toggle');
       console.log(props.match.params.roomID)
+      next.state = false;
+      console.log(next.state);
 };
 
 

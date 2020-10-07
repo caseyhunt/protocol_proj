@@ -3,13 +3,14 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import CreateRoom from "./routes/CreateRoom";
 import Room from "./routes/Room";
 import './App.css';
+import WebFont from 'webfontloader';
 
 function App() {
-  WebFontConfig = {
+  WebFont.load({
     typekit: {
       id: 'dwo8vrd'
     }
-  };
+  });
 
   return (
     <div className="App">

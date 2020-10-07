@@ -7,10 +7,10 @@ const Test = (props) => {
       const id = uuid();
       props.history.push(`/room/${id}`);
   }
-  
+
 return (
-  </div>
-  </div>
+  <div>
+  <div>
   <div class="intro light italic">be together now</div>
   <div class="button-container difference"><button onClick={create}>i'm ready</button></div>
 </div>

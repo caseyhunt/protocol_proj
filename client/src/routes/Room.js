@@ -163,7 +163,7 @@ function nextClicked(){
           </div>
 
           <div class="next" >
-              <button class="light difference next-button" onClick={nextClicked}>next {">"}</button>
+              <button class="light difference next-button" onClick={console.log('clicked')}>next {">"}</button>
           </div>
 
       </div>

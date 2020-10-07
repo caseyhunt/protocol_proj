@@ -11,14 +11,20 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route path="/" exact component={CreateRoom} />
-          <Route path="/test/" component={Test}>
-            <h1>TESTING 123</h1>
-          </Route>
+          <Route path="/test/" component={Test}/>
           <Route path="/room/:roomID" component={Room}/>
+          <Route path="/combined/" component={Combined}/>
         </Switch>
       </BrowserRouter>
     </div>
   );
+}
+
+const Combined = (props) => {
+  return(<div>
+  <Test />
+  <Room />
+</div>)
 }
 
 export default App;

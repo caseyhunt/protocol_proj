@@ -155,11 +155,22 @@ const Room = (props) => {
                 <div class="light difference">invite someone to join you here with this link:</div>
                 <div id="share-link" class="light difference"><a href="https://blooming-waters-99675.herokuapp.com/room/${props.match.params.roomID}">https://blooming-waters-99675.herokuapp.com/room/${props.match.params.roomID}</a></div>
             </div>
-            <div class="button-container">
-                <button class="difference" onClick={toggleHidden}>let's begin</button>
-            </div>
+            // <div class="button-container">
+            //     <button class="difference" onClick={toggleHidden}>let's begin</button>
+            // </div>
         </div>
 
+
+        <div class="prompt-container">
+
+            <div class="prompt subtitle">
+            </div>
+
+            <div class="next" onclick="">
+                <div class="light difference next-button">next {">"}</div>
+            </div>
+
+        </div>
 
         <div class="vid-container">
             <div class="vid1"><video autoPlay muted ref={userVideo} className="vid1"/></div>

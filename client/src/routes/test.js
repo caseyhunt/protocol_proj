@@ -9,7 +9,7 @@ const Test = (props) => {
 
   function create() {
       const id = uuid();
-      //props.history.push(`/room/${id}`);
+      props.history.push(`/room/${id}`);
   }
 
 
@@ -30,10 +30,6 @@ return (
               <h1 class="pink difference">Intimacy Chat</h1>
           </div>
 
-          <div class="link-container">
-              <div class="light difference">invite someone to join you here with this link:</div>
-              <div id="share-link" class="light difference"><a href="https://blooming-waters-99675.herokuapp.com/${id}">https://blooming-waters-99675.herokuapp.com/${id}}</a></div>
-          </div>
           <div class="button-container">
               <button class="difference" onClick={create}>let's begin</button>
           </div>

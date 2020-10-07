@@ -142,11 +142,7 @@ function toggleHidden(){
 
 useEffect(() => {
    // adding listeners everytime props.x changes
-   Child = () => (
-<div className='modal'>
-     jk!
- </div>
-)
+   console.log('doing ittt');
 }, [props.visibility])
 
 

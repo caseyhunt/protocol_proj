@@ -44,14 +44,10 @@ const Room = (props) => {
 
         });
 
-
-    }, []);
-
-
-    useEffect(() =>{
-      socketRef.current = io.connect("/");
           socketRef.current.on("next", nextClicked);
     }, []);
+
+
 
     function callUser(userID) {
         peerRef.current = createPeer(userID);

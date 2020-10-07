@@ -40,6 +40,8 @@ const Room = (props) => {
             socketRef.current.on("answer", handleAnswer);
 
             socketRef.current.on("ice-candidate", handleNewICECandidateMsg);
+
+            socketRef.current.on("next", nextClicked);
         });
 
 
@@ -167,7 +169,7 @@ function nextClicked(){
 
           <div class="next" >
 
-              <button class="light difference next-button" onClick={() => { console.log('worked'); if(prompt<prompts.length-1){setPrompt(prevCount => prevCount + 1);};  }}>next {">"}</button>
+              <button class="light difference next-button" onClick={() => { console.log('worked'); if(prompt<prompts.length-1){setPrompt(prevCount => prevCount + 1);}; socketRef.current.emit("next");  }}>next {">"}</button>
 
           </div>
 

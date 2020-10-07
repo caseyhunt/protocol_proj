@@ -165,7 +165,7 @@ function nextClicked(){
 
 
           <div class="next" >
-              <button class="light difference next-button" onClick={() => { console.log('worked'); }}>next {">"}</button>
+              <button class="light difference next-button" onClick={() => { console.log('worked'); promptNum+=2; }}>next {">"}</button>
           </div>
 
       </div>

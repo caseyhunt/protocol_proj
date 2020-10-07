@@ -166,7 +166,7 @@ function nextClicked(){
 
 
           <div class="next" >
-              <button class="light difference next-button" onClick={() => { console.log('worked'); setPrompt(prevCount => prevCount + 1); socketRef.broadcast.emit(prompt);}}>next {">"}</button>
+              <button class="light difference next-button" onClick={() => { console.log('worked'); setPrompt(prevCount => prevCount + 1);}}>next {">"}</button>
           </div>
 
       </div>
@@ -203,7 +203,7 @@ function nextClicked(){
 
 
         <div class="vid-container">
-            <div class="vid1"><video autoPlay muted ref={userVideo} className="vid1"/></div>
+            // <div class="vid1"><video autoPlay muted ref={userVideo} className="vid1"/></div>
             <div class="vid2"><video autoPlay ref={partnerVideo} className="vid2" /></div>
         </div>
 

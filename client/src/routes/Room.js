@@ -151,16 +151,23 @@ const Room = (props) => {
       <div class="prompt-container">
 
           <div class="prompt subtitle">
-          {prompts[prompt]}
+          {prompts[promptNum]}
           </div>
 
-          <div class="next" onClick={() => setPrompt(prevCount => prevCount + 1)}>
+          <div class="next" onClick={nextClicked}>
               <div class="light difference next-button">next {">"}</div>
           </div>
 
       </div>
 
     )
+
+function nextClicked(){
+  console.log(clicked);
+  promptNum==promptNum+1;
+  console.log(promptNum);
+
+}
 
 // function toggleHidden() => {(setState(true))};
 

@@ -5,6 +5,7 @@ import { v1 as uuid } from "uuid";
 
 const Test = (props) => {
   const userVideo = useRef();
+      const userStream = useRef();
 
   function create() {
       const id = uuid();

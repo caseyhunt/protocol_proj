@@ -42,6 +42,7 @@ const Room = (props) => {
           console.log('toggle');
           console.log(props.match.params.roomID);
           props.visibility = true;
+          props.typingstuff = "string";
           console.log(props.visibility);
     };
 
@@ -158,7 +159,6 @@ const Room = (props) => {
             </div>
             <div class="button-container">
                 <button class="difference" onClick={toggleHidden}>let's begin</button>
-                {!props.visibility && <Child/>}
             </div>
         </div>
 
@@ -168,7 +168,7 @@ const Room = (props) => {
             <div class="prompt subtitle">
             </div>
 
-            <div class="next" onclick="">
+            <div class="next ${props.typingstuff}" onclick="">
                 <div class="light difference next-button">next {">"}</div>
             </div>
 

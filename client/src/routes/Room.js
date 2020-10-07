@@ -137,10 +137,11 @@ function toggleHidden(){
   console.log(props.match.params.roomID);
   props.visibility = true;
   setState(true);
+  console.log(state);
   console.log(props.visibility);
 };
 
-// 
+//
 // useEffect(() => {
 //    // adding listeners everytime props.x changes
 //    return () => {

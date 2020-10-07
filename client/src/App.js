@@ -5,6 +5,12 @@ import Room from "./routes/Room";
 import './App.css';
 
 function App() {
+  WebFontConfig = {
+    typekit: {
+      id: 'dwo8vrd'
+    }
+  };
+
   return (
     <div className="App">
       <BrowserRouter>

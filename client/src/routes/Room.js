@@ -159,14 +159,12 @@ const Room = (props) => {
 
     return (
     <div>
-        <div id="text-container">
-
 
             <div class="button-container">
                 <button class="difference" onClick={() => setState(false)}>let's begin</button>
                 {state && <Child/>}
             </div>
-        </div>
+
 
 
         <div class="prompt-container">

@@ -162,6 +162,8 @@ function nextClicked(){
           {prompts[promptNum]}
           </div>
 
+          <button class="light difference next-button" onClick={() => { console.log('worked'); }}>next {">"}</button>
+
           <div class="next" >
               <button class="light difference next-button" onClick={() => { console.log('worked'); }}>next {">"}</button>
           </div>

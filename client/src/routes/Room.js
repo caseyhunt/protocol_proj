@@ -38,6 +38,13 @@ const Room = (props) => {
             socketRef.current.on("ice-candidate", handleNewICECandidateMsg);
         });
 
+        function toggleHidden(){
+          console.log('toggle');
+          console.log(props.match.params.roomID);
+          props.visibility = true;
+          console.log(props.visibility);
+    };
+
     }, []);
 
     function callUser(userID) {
@@ -132,12 +139,7 @@ const Room = (props) => {
 
 
 
-    function toggleHidden(){
-      console.log('toggle');
-      console.log(props.match.params.roomID);
-      props.visibility = true;
-      console.log(props.visibility);
-};
+
 
 
 

@@ -131,6 +131,12 @@ const Room = (props) => {
   </div>
 )
 
+useEffect(()=>{
+  return()=>{
+
+    next.state;
+  }
+})
 
 
     function toggleHidden(){

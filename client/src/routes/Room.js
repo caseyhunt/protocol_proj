@@ -14,7 +14,8 @@ const Room = (props) => {
     const userStream = useRef();
     const initialState = true;
     const [state, setState] = useState(initialState);
-    const prompts = ['promt 1 partner 1', 'prompt1 partner 2', 'prompt 2 partner 1', 'prompt 2 partner 2'];
+    let promptNum = 0;
+    const prompts = ['prompt 1 partner 1', 'prompt1 partner 2', 'prompt 2 partner 1', 'prompt 2 partner 2'];
 
     useEffect(() => {
         navigator.mediaDevices.getUserMedia({ audio: true, video: true }).then(stream => {
@@ -149,10 +150,10 @@ const Room = (props) => {
       <div class="prompt-container">
 
           <div class="prompt subtitle">
-          {prompts[0]}
+          {prompts[promptNum]}
           </div>
 
-          <div class="next" onclick="">
+          <div class="next" onClick={() => promptNum++}>
               <div class="light difference next-button">next {">"}</div>
           </div>
 

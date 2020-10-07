@@ -172,11 +172,6 @@ function nextClicked(){
 
     )
 
-    const Button = () => (
-      <div class="next">
-      <button class="light difference next-button" onClick={() => { console.log('worked'); }}>next {">"}</button>
-      </div>
-    )
 
 
 // function toggleHidden() => {(setState(true))};
@@ -201,7 +196,6 @@ function nextClicked(){
     <div>
           {state && <Title/>}
           {!state && <Prompt/>}
-          {!state && <Button/>}
 
 
 
@@ -211,7 +205,6 @@ function nextClicked(){
             <div class="vid1"><video autoPlay muted ref={userVideo} className="vid1"/></div>
             <div class="vid2"><video autoPlay ref={partnerVideo} className="vid2" /></div>
         </div>
-        <button class="light difference next-button" onClick={() => { console.log('worked'); }}>next {">"}</button>
 
     </div>
 

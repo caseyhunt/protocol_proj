@@ -12,7 +12,7 @@ const Room = (props) => {
     const socketRef = useRef();
     const otherUser = useRef();
     const userStream = useRef();
-    let nextClass = true;
+    const [next, nextState] = useState(true);
 
 
     useEffect(() => {
@@ -136,7 +136,7 @@ const Room = (props) => {
     function toggleHidden(){
       console.log('toggle');
       console.log(props.match.params.roomID)
-      nextClass = false;
+      nextState(false);
       console.log(nextClass);
 };
 
@@ -155,9 +155,10 @@ const Room = (props) => {
                 <div class="light difference">invite someone to join you here with this link:</div>
                 <div id="share-link" class="light difference"><a href="https://blooming-waters-99675.herokuapp.com/room/${props.match.params.roomID}">https://blooming-waters-99675.herokuapp.com/room/${props.match.params.roomID}</a></div>
             </div>
-            // <div class="button-container">
-            //     <button class="difference" onClick={toggleHidden}>let's begin</button>
-            // </div>
+            <div class="button-container">
+                <button class="difference" onClick={toggleHidden}>let's begin</button>
+                {!nextState && </Child>}
+            </div>
         </div>
 
 

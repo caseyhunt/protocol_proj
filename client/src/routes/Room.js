@@ -166,11 +166,9 @@ function nextClicked(){
 
 
           <div class="next" >
-<<<<<<< HEAD
-              <button class="light difference next-button" onClick={() => { console.log('worked'); setPrompt(prevCount => prevCount + 1);}}>next {">"}</button>
-=======
+
               <button class="light difference next-button" onClick={() => { console.log('worked'); setCount(prevCount => prevCount + 1); }}>next {">"}</button>
->>>>>>> parent of af63b3a... Update Room.js
+
           </div>
 
       </div>

@@ -166,7 +166,7 @@ function nextClicked(){
 
 
           <div class="next" >
-              <button class="light difference next-button" onClick={() => { console.log('worked'); setPrompt(prevCount => prevCount + 1); socketRef.current.emit(prompt);}}>next {">"}</button>
+              <button class="light difference next-button" onClick={() => { console.log('worked'); setPrompt(prevCount => prevCount + 1); socketRef.broadcast.emit(prompt);}}>next {">"}</button>
           </div>
 
       </div>

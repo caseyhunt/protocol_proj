@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import ReactDOM from 'react-dom';
 import io from "socket.io-client";
+import { v1 as uuid } from "uuid";
 
 const Test = (props) => {
   function create() {

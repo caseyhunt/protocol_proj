@@ -142,7 +142,10 @@ function toggleHidden(){
 
 useEffect(() => {
    // adding listeners everytime props.x changes
+   return () => {
    console.log('doing ittt');
+};
+
 }, [props.visibility])
 
 

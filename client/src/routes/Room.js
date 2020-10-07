@@ -14,7 +14,7 @@ const Room = (props) => {
     const userStream = useRef();
     const initialState = true;
     const [state, setState] = useState(initialState);
-    const promptNum = 0;
+    let promptNum = 0;
     const [prompt, setPrompt] = useState(promptNum);
     const prompts = ['prompt 1 partner 1', 'prompt1 partner 2', 'prompt 2 partner 1', 'prompt 2 partner 2'];
 
@@ -163,8 +163,8 @@ const Room = (props) => {
     )
 
 function nextClicked(){
-  console.log(clicked);
-  promptNum==promptNum+1;
+  console.log('clicked');
+  promptNum=promptNum+1;
   console.log(promptNum);
 
 }

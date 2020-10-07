@@ -131,18 +131,12 @@ const Room = (props) => {
   </div>
 )
 
-useEffect(()=>{
-  return()=>{
-
-    next.state;
-  }
-})
 
 
     function toggleHidden(){
       console.log('toggle');
       console.log(props.match.params.roomID)
-      next.state = false;
+      next.setState({state:false});
       console.log(next.state);
 };
 

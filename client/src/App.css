@@ -127,7 +127,8 @@ body {
   background: #000;
 }
 
-.light {
+.light,
+a {
   color: #fff;
 }
 

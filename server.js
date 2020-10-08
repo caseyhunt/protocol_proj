@@ -33,7 +33,7 @@ io.on("connection", socket => {
     });
 
     socket.on("next", function next(){
- io.sockets.emit("next");
+ io.sockets.emit("next-prompt");
 });
 
 

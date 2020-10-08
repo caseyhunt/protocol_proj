@@ -158,6 +158,7 @@ function nextClicked(){
     socketRef.current = io.connect("/");
 
   socketRef.current.emit("next");
+  if(prompt<prompts.length-1){setPrompt(prevCount => prevCount + 1);};
 
   // promptNum=promptNum+1;
   // console.log(promptNum);

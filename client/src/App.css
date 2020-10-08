@@ -202,6 +202,7 @@ button:hover {
   mix-blend-mode: normal;
   color: black;
   background: white;
+  pointer-events: none;
 }
 
 .intro {
@@ -228,6 +229,8 @@ button:hover {
 
 .prompt-container {
   justify-content: flex-end;
+  z-index: 1;
+  mix-blend-mode: unset;
 }
 
 #text-container>div,

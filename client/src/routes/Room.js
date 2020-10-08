@@ -45,7 +45,7 @@ const Room = (props) => {
 
         });
           socketRef.current = io.connect("/");
-          socketRef.current.on("next", nextClicked);
+          socketRef.current.on("next-prompt", nextClicked);
     }, []);
 
 

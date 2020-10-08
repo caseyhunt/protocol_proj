@@ -186,6 +186,11 @@ button:hover {
 .next-button:hover {
   cursor: pointer;
   background: rgba(255, 255, 255, 0);
+  border: none;
+}
+
+.next-button:active {
+  outline: none;
 }
 
 #share-link {
@@ -269,7 +274,7 @@ button:hover {
   position: absolute;
   top: 0;
   left: 0;
-   z-index: -100;
+  z-index: -100;
 }
 
 .vid1,

@@ -212,11 +212,13 @@ button:hover {
 #text-container,
 .prompt-container {
   position: absolute;
+  z-index: 2;
   width: 90vw;
   height: 90vh;
   padding: 5vh 5vw;
   display: flex;
   flex-direction: column;
+  mix-blend-mode: difference;
 }
 
 #text-container {
@@ -271,15 +273,14 @@ button:hover {
 /* ------------------ video layout ------------------ */
 
 .vid-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -100;
+  position: relative;
+  pointer-events: none;
 }
 
 .vid1,
 .vid2 {
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   mix-blend-mode: overlay;

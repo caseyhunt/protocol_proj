@@ -157,7 +157,7 @@ function nextClicked(){
   console.log('clicked');
     socketRef.current = io.connect("/");
 
-  socketRef.current.broadcast("next");
+  socketRef.current.broadcast.emit("next");
 
   // promptNum=promptNum+1;
   // console.log(promptNum);

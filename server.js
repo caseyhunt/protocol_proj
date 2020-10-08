@@ -32,7 +32,7 @@ io.on("connection", socket => {
         io.to(payload.target).emit("answer", payload);
     });
 
-    socket.on("next", payload => {
+    socket.on("next", {
         io.to(payload.target).emit("next");
     });
 

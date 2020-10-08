@@ -156,7 +156,8 @@ const Room = (props) => {
 function nextClicked(){
   console.log('clicked');
     socketRef.current = io.connect("/");
-  socketRef.current.emit("next");
+
+  socketRef.current.broadcast("next");
 
   // promptNum=promptNum+1;
   // console.log(promptNum);

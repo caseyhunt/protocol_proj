@@ -35,7 +35,6 @@ io.on("connection", socket => {
     socket.on("next", {
  io.sockets.emit("next");
 });
-    });
 
 
     socket.on("ice-candidate", incoming => {

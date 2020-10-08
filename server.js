@@ -33,7 +33,8 @@ io.on("connection", socket => {
     });
 
     socket.on("next", {
-        io.to(payload.target).emit("next");
+ io.sockets.emit("next");
+});
     });
 
 

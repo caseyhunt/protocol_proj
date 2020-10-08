@@ -157,7 +157,7 @@ function nextClicked(){
   console.log('clicked');
     socketRef.current = io.connect("/");
 
-  socketRef.current.emit("next");
+
   if(prompt<prompts.length-1){setPrompt(prevCount => prevCount + 1);};
 
   // promptNum=promptNum+1;
@@ -177,7 +177,7 @@ function nextClicked(){
 
           <div class="next" >
 
-              <button class="light difference next-button" onClick={() => { console.log('worked');  if(prompt<prompts.length-1){setPrompt(prevCount => prevCount + 1);}; nextClicked(); }}>next {">"}</button>
+              <button class="light difference next-button" onClick={() => { console.log('worked');  if(prompt<prompts.length-1){setPrompt(prevCount => prevCount + 1);};  socketRef.current.emit("next"); nextClicked(); }}>next {">"}</button>
 
           </div>
 

@@ -22,7 +22,7 @@ io.on("connection", socket => {
             socket.to(otherUser).emit("user joined", socket.id);
         }
     });
-    
+
 
     socket.on("offer", payload => {
         io.to(payload.target).emit("offer", payload);
@@ -31,6 +31,11 @@ io.on("connection", socket => {
     socket.on("answer", payload => {
         io.to(payload.target).emit("answer", payload);
     });
+
+    socket.on("next", payload => {
+        io.to(payload.target).emit("next");
+    });
+
 
     socket.on("ice-candidate", incoming => {
         io.to(incoming.target).emit("ice-candidate", incoming.candidate);
